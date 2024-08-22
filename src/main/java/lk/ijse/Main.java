@@ -35,8 +35,8 @@ public class Main {
 
 
         //session.save(teacher);
-        //session.update(student);
-        //session.delete("1",student);
+        //session.update(teacher);
+        //session.delete("1",teacher);
 //        Teacher teacher1=session.get(Teacher.class,1);
 //        System.out.println(teacher1.toString());
 
