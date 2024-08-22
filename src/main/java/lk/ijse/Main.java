@@ -11,106 +11,37 @@ public class Main {
     public static void main(String[] args) {
 
         Session session = FactoryConfiguration.getInstance().getSession();
-//
-//        //  -----------------------------STUDENT SAVE/UPDATE-------------------
 
-//        FullName fullName = new FullName("Sathru", "Nimasha");
-//        Student student = new Student();
-//        student.setId(03);
-//        student.setName(fullName);
-//        student.setAddress("Matara");
-//        Transaction transaction = session.beginTransaction();
-//
-//
-//        session.save(student);
-//        //session.update(teacher);
-//        transaction.commit();
-//        session.close();
-//    }
+        FullName fullName1 = new FullName("Dasuni", "Nimnavi");
+        FullName fullName2 = new FullName("Vikum", "Sudesh");
 
 
-        //---------------STUDENT DELETE--------------------
+        Student student = new Student();
+        student.setId(1);
+        student.setName(fullName1);
+        student.setAddress("Mathara");
 
-//        Student student = new Student();
-//        student.setId(02);
-//        Transaction transaction = session.beginTransaction();
-//
-//
-//
-//        session.delete(student);
-//        transaction.commit();
-//        session.close();
-//    }
+       Teacher teacher = new Teacher();
+        teacher.setId(2);
+        teacher.setName(fullName2);
+        teacher.setAddress("Panadura");
 
-
-        //---------------STUDENT GET--------------------
-
-//        Student student = session.get(Student.class, 01);
-//        Transaction transaction = session.beginTransaction();
-//
-//
-//        transaction.commit();
-//        session.close();
-//
-//        // Display the retrieved student's details
-//        if (student != null) {
-//            System.out.println("Student ID: " + student.getId());
-//            System.out.println("Student Name: " + student.getName());
-//            System.out.println("Student Address: " + student.getAddress());
-//        } else {
-//            System.out.println("Student not found");
-//        }
-//    }
-
-        //---------- TEACHER SAVE/UPDATE-------------
-//
-//        FullName fullName = new FullName("Dasun", "Kanchana");
-//        Teacher teacher = new Teacher();
-//        teacher.setId(04);
-//        teacher.setName(fullName);
-//        teacher.setAddress("Panadura");
-//        Transaction transaction = session.beginTransaction();
-//
-//
-//
-//        session.save(teacher);
-//        //session.update(teacher);
-//        transaction.commit();
-//        session.close();
-// }
+        Transaction transaction = session.beginTransaction();
+       // session.save(student);
+        //session.update(student);
+       // session.delete("1",student);
+//        Student student1=session.get(Student.class,1);
+//        System.out.println(student1.toString());
 
 
-        //-----------TEACHER DELETE----------------
+        //session.save(teacher);
+        //session.update(student);
+        //session.delete("1",student);
+//        Teacher teacher1=session.get(Teacher.class,1);
+//        System.out.println(teacher1.toString());
 
-//        Teacher teacher=new Teacher();
-//        teacher.setId(01);
-//        Transaction transaction = session.beginTransaction();
-//
-//
-//
-//        session.delete(teacher);
-//        transaction.commit();
-//        session.close();
-//    }
-
-
-        //----------GET TEACHER-----------
-//        Teacher teacher = session.get(Teacher.class, 01);
-//        Transaction transaction = session.beginTransaction();
-//
-//
-//        transaction.commit();
-//        session.close();
-//
-//        // Display the retrieved student's details
-//        if (teacher != null) {
-//            System.out.println("Teacher ID: " + teacher.getId());
-//            System.out.println("Teacher Name: " + teacher.getName());
-//            System.out.println("Teacher Address: " + teacher.getAddress());
-//        } else {
-//            System.out.println("Teacher not found");
-//        }
+        transaction.commit();
+        session.close();
     }
-
 
     }
